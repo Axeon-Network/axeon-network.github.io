@@ -1,0 +1,179 @@
+html, body {
+    background-size: 100% 300px, auto;
+    background-color: rgb(51, 61, 88);
+    color: rgb(225, 225, 228);
+    font-family: "inter", monospace, sans-serif;
+    height: 90%;
+    margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+pre, code {
+    font-family: monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: white;
+}
+#link, #postlink {
+    text-decoration: none;
+}
+#link:hover,
+#link:focus,
+#postlink:hover,
+#postlink:focus {
+    text-decoration: underline;
+}
+#eighteightthreeone {
+    image-rendering: pixelated;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: 0.2s;
+}
+.content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.center {
+    display: block;
+    text-align: center;
+}
+a {
+     color: rgb(225, 225, 228);
+}
+#logo {
+    background: url('../img/logo.png') no-repeat center center;
+    background-size: contain;
+    width: 195px;
+    height: 71px;
+    margin: 0 auto;
+    padding-bottom: 1%;
+}
+#title {
+    font-weight: bold;
+    font-size: 32px;
+    font-family: "quicksand";
+}
+.section {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "quicksand";
+}
+#postlink {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "quicksand";
+}
+#link,
+#postlink {
+    position: relative;
+    transition: 0.2s;
+}
+#link,
+#link:hover,
+#link:focus,
+#postlink,
+#postlink:hover,
+#postlink:focus {
+    text-decoration: none;
+    }
+#link::after,
+#postlink::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+#link:hover::after,
+#link:focus::after,
+#postlink:hover::after,
+#postlink:focus::after {
+    transform: translateX(-50%) scaleX(1);
+}
+a.button, button.button {
+      background-color: rgb(70, 82, 95);
+      color: rgb(225, 225, 228);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 15px 15px 15px 15px;
+      border: 15px 15px 15px 15px white;
+      text-decoration: none !important;
+      transition: 0.2s;
+  }
+a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
+    background-color: rgb(58, 66, 75);
+}
+button.button:disabled {
+    background-color: rgb(70, 82, 95);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.content {
+    animation: fade 0.3s ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+img:hover {
+    box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
+    text-decoration: none !important;
+}
+.head.hasbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+    .navbar #link {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 16px;
+  }
+}
+@media (min-width: 1024px) {
+   html {
+    font-size: 17.5px;
+  }
+  .content {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 16px;
+  }
+}
+@keyframes slide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade {
+  from {top: -25px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+    }
+@font-face {
+    font-family: "inter";
+    src: url("../css/fonts/inter.ttf");
+}
+@font-face {
+    font-family: "quicksand";
+    src: url("../css/fonts/quicksand.ttf");
+}
