@@ -1,6 +1,6 @@
-# axeon-network.github.io
+# AxeonWebsite
 A basic landing page for https://axeon-network.github.io
 
-Copyright © 2025 Axeon Network\
+Copyright © 2026 Axeon Network\
 Licensed under the MIT License\
-Based on [https://github.com/thekayaurora/thekayaurora.github.io](KayWebsite)
+Based on [https://github.com/thekayaurora/thekayaurora.github.io](https://github.com/thekayaurora/thekayaurora.github.io)
