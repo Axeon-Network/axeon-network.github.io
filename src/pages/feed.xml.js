@@ -3,7 +3,9 @@ import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 import { d } from "../config";
 
-const parser = new MarkdownIt();
+const parser = new MarkdownIt({
+  html: true
+});
 const site = import.meta.env.SITE;
 
 function makeImageSrcAbsolute(html, siteOrigin) {
@@ -13,11 +15,8 @@ function makeImageSrcAbsolute(html, siteOrigin) {
     }
 
     const cleanedSrc = src.replace(/(\.\.\/)+public\//, '');
-
     const path = cleanedSrc.startsWith('/') ? cleanedSrc : '/' + cleanedSrc;
-
     const absoluteSrc = new URL(path, siteOrigin).href;
-
     return match.replace(src, absoluteSrc);
   });
 }

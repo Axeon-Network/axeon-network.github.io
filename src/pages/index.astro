@@ -1,17 +1,56 @@
 ---
 import { d } from "../config";
 import Layout from '../layouts/Site.astro';
+import Box from '../components/Box.astro';
 ---
 
-<Layout>
-   <div class="center">
-      <img src="../../img/logo.png" style="width:200px; height:200px; border-radius:100%">
-   <h1 id="title">Axeon Network</h1>
-   <small>(est. 2017)</small>
+<Layout title="Home" head="" desc=`This is the <b>Axeon Network</b>. We run small community-oriented spaces and projects.`>
    <div>
-      <br>
-       <a id="link" href="/discord">Discord Server</a> · <a id="link" href="/kurowiki">KuroWiki</a>
-       </div>
+      <hr>
+      <div class="section">
+         <div class="head">Chat...</div>
+         <div class="grid horizontal" id="main">
+            <div class="grid vertical">
+               <img src="/img/placeholder.png">
+               <span class="name">Discord Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/discord">Join</a>
+               </div>
+            </div>
+            <div class="grid vertical">
+               <img src="/img/placeholder.png">
+               <span class="name">Stoat Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/stoat">Join</a>
+               </div>
+            </div>
+            <div class="grid vertical">
+               <img src="/img/placeholder.png">
+               <span class="name">Fluxer Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/fluxer">Join</a>
+               </div>
+            </div>
          </div>
-   </div>
+       </div>
+       <hr>
+      <div class="section">
+         <div class="head">Check out...</div>
+         <div class="grid">
+            <div class="grid vertical">
+               <img src="/img/placeholder.png">
+               <span class="name">KuroWiki</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/kurowiki">Visit</a>
+                  <a class="button" href="https://github.com/Axeon-Network">Source Code</a>
+              </div>
+            </div>
+          </div>
+       </div>
+       <hr>
+       <div class="section">
+           <div class="head">Add our 88x31 button!</div>
+           <a href="https://axeon-network.github.io"><img src="/img/8831/axeon.png" title="Axeon Network" id="eighteightthreeone"></a>
+       </div>
+    </div>
 </Layout>

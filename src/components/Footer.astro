@@ -1,0 +1,16 @@
+---
+import { d } from "../config";
+import pkg from '../../package.json';
+export const name = pkg.name;
+export const version = pkg.version;
+---
+<center><div class="footer">
+    <div><b>© {d.copyrightyear} {d.name}</b></div>
+    <br>
+    <div><b><a href=`https://github.com/${d.sourcecode}`>{name}</a></b></div>
+    <div>Source code of this website is licensed under <a href="https://opensource.org/license/mit">MIT</a></div>
+    <div>Website designed with 💜 by <a href="https://avery.is-a.dev">Avery</a>, based on <a href="https://github.com/AveryEclipse/averyeclipse.github.io">AveryWebsite</a>!</div>
+    <noscript><br>⚠️&nbsp;<i>JavaScript is disabled, some website functionality may be limited</i>&nbsp;⚠️</noscript>
+    <br>
+    <div>🚧&nbsp;<i><b>This website is still under construction</b></i>&nbsp;🚧</div>
+</div></center>
