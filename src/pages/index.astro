@@ -49,8 +49,23 @@ import Box from '../components/Box.astro';
        </div>
        <hr>
        <div class="section">
-           <div class="head">Add our 88x31 button!</div>
-           <a href="https://axeon-network.github.io"><img src="/img/8831/axeon.png" title="Axeon Network" id="eighteightthreeone"></a>
+         <div class="head">Add our 88x31 button!</div>
+            <div class="button8831">
+               <img src="/img/8831/axeon.png" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
+               <img src="/img/8831/axeon2.png" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/axeon2.png"&gt;` style="cursor:pointer;">
+               <div id="clicktocopy"></div><br>
+           </div>
        </div>
-    </div>
+       <script>
+            const status = document.getElementById('clicktocopy');
+
+            document.querySelectorAll('.mybutton').forEach(btn => {
+              const element = btn as HTMLElement;
+              element.addEventListener('click', () => {
+             const text = element.dataset.copy;
+
+            navigator.clipboard.writeText(text)
+         });
+     });
+     </script>
 </Layout>
