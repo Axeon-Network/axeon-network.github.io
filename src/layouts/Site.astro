@@ -9,6 +9,7 @@ interface Props {
 const { title, head, desc, showRssButton = false, hideFooter = false } = Astro.props;
 const heading = head || title;
 import { d } from "../config.ts";
+import { Icon } from 'astro-icon/components';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -20,20 +21,19 @@ import Footer from '../components/Footer.astro';
         <meta property="og:site_name" content=`${d.name}` />
         <meta property="og:image" content=`${Astro.site}${d.favicon}`>
         <meta name="title" content={title} />
-		<meta name="description" content=`The official website of ${d.name}!` />
+		<meta name="description" content={desc} />
 		<link rel="icon" type="image/svg+xml" href=`https://${d.domain}${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
 		<link rel="stylesheet" href="/css/style.css" type="text/css">
 		<title>{title} ~ {d.name}</title>
 	</head>
 	<body>
 		<div class="content">
         <div class="navbar">
-          <center><div class="center"><div id="logo"></div></div></center>
-        </div>
+    <center><div class="center"><div id="logo"></div></div></center>
+</div>
 		<div class="box">
-          <div>
+         <div>
 			<div class="desc">
 			   <div>
                <div set:html={desc}></div>
@@ -44,7 +44,7 @@ import Footer from '../components/Footer.astro';
 		{ !hideFooter && (
 		<Footer />
 		)}
-	      </div>
+		</div>
 		</div>
 	</body>
 </html>
