@@ -8,43 +8,18 @@ import Layout from '../layouts/Site.astro';
       <hr>
       <div class="section">
          <div class="head">Chat...</div>
-         <div class="grid horizontal" id="main">
-            <div class="grid vertical">
-               <img src="/img/placeholder.png">
-               <span class="name">Discord Server</span>
-               <div class="grid horizontal">
-                  <a class="button" href="/discord">Join</a>
-               </div>
-            </div>
-            <div class="grid vertical">
-               <img src="/img/placeholder.png">
-               <span class="name">Stoat Server</span>
-               <div class="grid horizontal">
-                  <a class="button" href="/stoat">Join</a>
-               </div>
-            </div>
-            <div class="grid vertical">
-               <img src="/img/placeholder.png">
-               <span class="name">Fluxer Server</span>
-               <div class="grid horizontal">
-                  <a class="button" href="/fluxer">Join</a>
-               </div>
-            </div>
-         </div>
+         <ul>
+            <li><a href="/discord">Discord Server</a>&nbsp;<small>(primary)</small></li>
+            <li><a href="/stoat">Stoat Server</a></li>
+            <li><a href="/fluxer">Fluxer Server</a></li>
+         </ul>
        </div>
        <hr>
       <div class="section">
          <div class="head">Check out...</div>
-         <div class="grid">
-            <div class="grid vertical">
-               <img src="/img/placeholder.png">
-               <span class="name">KuroWiki</span>
-               <div class="grid horizontal">
-                  <a class="button" href="/kurowiki">Visit</a>
-                  <a class="button" href="https://github.com/Axeon-Network/kurowiki">Source Code</a>
-              </div>
-            </div>
-          </div>
+         <ul>
+            <li><a href="/kurowiki">KuroWiki</a>&nbsp;<small>(<a href="https://github.com/Axeon-Network/kurowiki">source code</a>)</small></li>
+         </ul>
        </div>
        <hr>
        <div class="section">

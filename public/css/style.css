@@ -7,7 +7,7 @@
     src: url("../css/fonts/funneldisplaylight.ttf");
 }
 html {
-    background-color: rgb(56, 69, 90);
+    background-color: rgb(38, 64, 87);
     color: rgb(250, 250, 250);
     font-family: "funneldisplaylight", sans-serif;
     font-size: 17.5px;
@@ -16,9 +16,9 @@ body {
     background-size: 100% 300px, auto;
     background: linear-gradient(
     to bottom,
-      rgb(56, 69, 90) 0px,
-      rgb(56, 69, 90) 150px
-    ) no-repeat, rgb(56, 69, 90);
+      rgb(38, 64, 87) 0px,
+      rgb(38, 64, 87) 150px
+    ) no-repeat, rgb(38, 64, 87);
 }
 .content {
     position: relative;
@@ -47,8 +47,14 @@ body {
     z-index: 1;
 }
 .section {
-    text-align: center;
     padding: 4px;
+}
+.section li :not(small):not(small a) {
+    font-weight: bold;
+}
+.head,
+.button8831 {
+    text-align: center;
 }
 h1, #title {
     font-weight: bold;
@@ -109,16 +115,10 @@ button.button:disabled {
     font-weight: bold;
 }
 @media (min-width: 1024px) {
-    .grid.horizontal#main {
-        grid-template-columns: repeat(3, 1fr);
-    }
     .grid.horizontal {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .grid.horizontal .button:only-child {
         grid-column: span 3;
-    }
-    .grid.horizontal#main .button:only-child {
-        grid-column: span 2;
     }
 }
