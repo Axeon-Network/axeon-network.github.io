@@ -114,6 +114,25 @@ button.button:disabled {
     font-size: 24px;
     font-weight: bold;
 }
+#list {
+    list-style-type: none;
+}
+[data-icon] {
+    display: inline-block;
+}
+[data-icon="discord"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+}
+[data-icon="stoat"],
+[data-icon="fluxer"] {
+    margin-inline: 1px;
+    vertical-align: -2px;
+}
+[data-icon="material-symbols:book-ribbon-outline-rounded"] {
+     vertical-align: -4px;
+}
 @media (min-width: 1024px) {
     .grid.horizontal {
         grid-template-columns: repeat(3, 1fr);
