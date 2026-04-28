@@ -9,18 +9,43 @@ import { Icon } from 'astro-icon/components';
       <hr>
       <div class="section">
          <div class="head">Chat...</div>
-         <ul>
-            <li id="list"><Icon name="discord" />&nbsp;<a href="/discord">Discord Server</a>&nbsp;<small>(primary)</small></li>
-            <li id="list"><Icon name="stoat" />&nbsp;<a href="/stoat">Stoat Server</a></li>
-            <li id="list"><Icon name="fluxer" />&nbsp;<a href="/fluxer">Fluxer Server</a></li>
-         </ul>
+         <div class="grid horizontal" id="main">
+            <div class="grid vertical">
+               <Icon name="discord" />
+               <span class="name">Discord Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/discord">Join</a>
+               </div>
+            </div>
+            <div class="grid vertical">
+               <Icon name="stoat" />
+               <span class="name">Stoat Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/stoat">Join</a>
+               </div>
+            </div>
+            <div class="grid vertical">
+               <Icon name="fluxer" />
+               <span class="name">Fluxer Server</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/fluxer">Join</a>
+               </div>
+            </div>
+         </div>
        </div>
        <hr>
       <div class="section">
          <div class="head">Check out...</div>
-         <ul>
-            <li id="list"><Icon name="material-symbols:book-ribbon-outline-rounded" />&nbsp;<a href="/kurowiki">KuroWiki</a>&nbsp;<small>(<a href="https://github.com/Axeon-Network/kurowiki">source code</a>)</small></li>
-         </ul>
+         <div class="grid">
+            <div class="grid vertical">
+               <Icon name="material-symbols:book-ribbon-outline-rounded" />
+               <span class="name">KuroWiki</span>
+               <div class="grid horizontal">
+                  <a class="button" href="/kurowiki">Visit</a>
+                  <a class="button" href="https://github.com/Axeon-Network/kurowiki">Source Code</a>
+              </div>
+            </div>
+          </div>
        </div>
        <hr>
        <div class="section">
