@@ -11,14 +11,7 @@ html {
     color: rgb(250, 250, 250);
     font-family: "funneldisplaylight", sans-serif;
     font-size: 17.5px;
-}
-body {
     background-size: 100% 300px, auto;
-    background: linear-gradient(
-    to bottom,
-      rgb(38, 64, 87) 0px,
-      rgb(38, 64, 87) 150px
-    ) no-repeat, rgb(38, 64, 87);
 }
 .content {
     position: relative;
@@ -26,18 +19,12 @@ body {
     margin: 0 auto;
 }
 .navbar {
-    position: relative;
-    padding: 24px;
-    font-family: "funneldisplay";
-    font-size: 1rem;
-    text-transform: lowercase;
-    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
 }
-#logo {
-    background: url('../img/logo.png') no-repeat center center;
-    background-size: contain;
+.logo img {
     width: 350px;
-    height: 142px;
 }
 .box {
     background-color: rgba(255, 255, 255, 0.1);
@@ -57,7 +44,7 @@ body {
 .button8831 {
     text-align: center;
 }
-h1, #title {
+h1 {
     font-weight: bold;
     font-size: 34px;
     font-family: "funneldisplay";
@@ -89,7 +76,7 @@ a.button, button.button {
     padding-right: 10px;
     border-radius: 15px 15px 15px 15px;
     border: 15px 15px 15px 15px white;
-    text-decoration: none !important;
+    text-decoration: none;
     transition: 0.2s;
 }
 a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
@@ -103,11 +90,11 @@ button.button:disabled {
 .grid {
     display: grid;
     min-width: 0;
-    }
+}
 .grid.vertical {
     grid-template-rows: auto 1fr;
     justify-items: center;
-    }
+}
 .grid .name {
     font-size: 24px;
     font-weight: bold;

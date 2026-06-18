@@ -3,13 +3,10 @@ interface Props {
 	title: string;
 	head?: string;
 	desc: string;
-	showRssButton?: boolean;
-	hideFooter?: boolean;
 }
-const { title, head, desc, showRssButton = false, hideFooter = false } = Astro.props;
+const { title, head, desc } = Astro.props;
 const heading = head || title;
-import { d } from "../config.ts";
-import { Icon } from 'astro-icon/components';
+import { cfg } from "../config";
 import Footer from '../components/Footer.astro';
 ---
 
@@ -18,32 +15,31 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta property="og:site_name" content=`${d.name}` />
-        <meta property="og:image" content=`${Astro.site}${d.favicon}`>
+        <meta property="og:site_name" content={cfg.name} />
+        <meta property="og:image" content={cfg.favicon} />
         <meta name="title" content={title} />
-		<meta name="description" content=`The official website of ${d.name}!` />
-		<link rel="icon" type="image/svg+xml" href=`https://${d.domain}${d.favicon}` />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/css/style.css" type="text/css">
-		<title>{title} ~ {d.name}</title>
+		<meta name="description" content=`The official website of ${cfg.name}!` />
+		<link rel="stylesheet" href="/css/style.css" type="text/css" />
+		<link rel="icon" type="image/svg+xml" href={cfg.favicon} />
+		<title>{title} ~ {cfg.name}</title>
 	</head>
 	<body>
 		<div class="content">
-        <div class="navbar">
-    <center><div class="center"><div id="logo"></div></div></center>
-</div>
+        <div class="navbar logo">
+            <a href="/"><img src={cfg.logo} alt={cfg.name}></a>
+        </div>
 		<div class="box">
          <div>
 			<div class="desc">
-			   <div>
                <div set:html={desc}></div>
-			   </div>
             </div>
 		<slot />
 		</div>
-		{ !hideFooter && (
-		<Footer />
-		)}
+        <aside>
+            <slot name="footer">
+            <Footer />
+            </slot>
+        </aside>
 		</div>
 		</div>
 	</body>

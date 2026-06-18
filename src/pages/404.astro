@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Site.astro';
 ---
-<Layout title="404 Not Found" head="" desc="<b>🚫 404 Not Found</b>" hideFooter={true}>
+<Layout title="404 Not Found" desc="<b>🚫 404 Not Found</b>">
     <p>This page may have been moved, renamed, or deleted.</p>
-    <i>Temporary: if you reached this page after clicking on a KuroWiki search result, please append "/kurowiki/" in the URL address, between axeon-network.github.io and the article permalink.</a></i>
+    <Fragment slot="footer" />
 </Layout>

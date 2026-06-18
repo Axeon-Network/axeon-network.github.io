@@ -1,12 +1,15 @@
-export const d = {
-  domain: "axeon-network.github.io", // The site's domain/subdomain. 
-                          // Required for the favicon as modern browsers restrict loading favicons under HTTP on HTTPS
-                          // Do not forget to also include the site's domain/subdomain in the astro.config.mjs file
-  name: "Axeon Network", // The name of the owner of the site
-  shortname: "Axeon", // Shorter form of the name of the owner of the site, Mostly used in introductions or as an alternative to the longer name.
+export const cfg = {
+  // ABOUT THE WEBSITE
+  name: "Axeon Network", // Website name
+  shortname: "Axeon", // Shorter form of the website name (used in descriptions and embeds)
+  domain: "axeon-network.github.io", // The site's domain/subdomain
   favicon: "/img/logotype.png", // The site's favicon
   logo: "/img/logo.png", // The site's logo
+  iconset: "material-symbols", // The Iconify icon set used across the site
+  sourcecode: "http://github.com/Axeon-Network/axeon-network.github.io", // URL address of the published source code
 
+  // COPYRIGHT & LICENSING
   copyrightyear: "2017-2026", // Copyright year. Change at first site change of the year
-  sourcecode: "Axeon-Network/axeon-network.github.io", // Location of the published source code, in format "username/repo". It has to be GitHub.
+  license: "MIT", // Name of the license the website source code is licensed under. Keep it short form
+  licenseurl: "https://opensource.org/license/mit", // URL to the license of the source code
 };

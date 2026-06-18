@@ -1,10 +1,10 @@
 ---
-import { d } from "../config";
+import { cfg } from "../config";
 import Layout from '../layouts/Site.astro';
 import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Home" head="" desc=`This is the <b>Axeon Network</b>. We run small community-oriented spaces and projects.`>
+<Layout title="Home" desc=`This is the <b>Axeon Network</b>. We run small community-oriented spaces and projects.`>
    <div>
       <hr>
       <div class="section">
@@ -51,14 +51,12 @@ import { Icon } from 'astro-icon/components';
        <div class="section">
          <div class="head">Add our 88x31 button!</div>
             <div class="button8831">
-               <img src="/img/8831/axeon.png" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
-               <img src="/img/8831/axeon2.png" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/axeon2.png"&gt;` style="cursor:pointer;">
-               <div id="clicktocopy"></div><br>
+               <img src="/img/8831/axeon.png" alt="Axeon Network button 1" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
+               <img src="/img/8831/axeon2.png" alt="Axeon Network button 2" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon2.png"&gt;` style="cursor:pointer;">
+               <br>
            </div>
        </div>
        <script>
-            const status = document.getElementById('clicktocopy');
-
             document.querySelectorAll('.mybutton').forEach(btn => {
               const element = btn as HTMLElement;
               element.addEventListener('click', () => {
