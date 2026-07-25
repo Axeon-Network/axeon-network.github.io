@@ -3,11 +3,34 @@ import pkg from '../../package.json';
 import { version } from 'astro/package.json';
 import { cfg } from "../config";
 ---
+
+<hr>
 <center><div class="footer">
+    <h4>Add our 88x31 button!</h4>
+    <div class="button8831">
+      <img src="/img/8831/axeon.png" alt="Axeon Network button 1" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
+      <img src="/img/8831/axeon2.png" alt="Axeon Network button 2" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon2.png"&gt;` style="cursor:pointer;">
+    </div>
+    <script>
+      document.querySelectorAll('.mybutton').forEach(btn => {
+         const element = btn as HTMLElement;
+         element.addEventListener('click', () => {
+            const text = (element.dataset.copy || "")
+                .replaceAll("&lt;", "<")
+                .replaceAll("&gt;", ">");
+            navigator.clipboard.writeText(text)
+         });
+      });
+    </script>
+    <br>
     <div><b>© {cfg.copyrightyear} {cfg.name}</b></div>
     <br>
-    <div><b><a href={cfg.sourcecode}>{pkg.name}</a></b> running on Astro {version}</div>
-    <div>Source code of this website is licensed under <a href={cfg.licenseurl}>{cfg.license}</a></div>
-    <div>Website designed with 💜 by <a href="https://avery.is-a.dev">Avery</a>, based on <a href="https://github.com/AveryEclipse/averyeclipse.github.io">AveryWebsite</a>!</div>
+    <details>
+        <summary>Show site info</summary>
+        <div><b><a href={cfg.sourcecode}>{pkg.name}</a></b> running on Astro {version}</div>
+        <div>Source code of this website is licensed under <a href={cfg.licenseurl}>{cfg.license}</a></div>
+        <div>Website designed with 💜 by <a href="https://avery.is-a.dev">AveryEclipse</a>!</div>
+        <div>Wordmark designed by <a href="https://github.com/SnowyBiFox">KitSixtyFour</a></div>
+    </details>
     <noscript><br>⚠️&nbsp;<i>JavaScript is disabled, some website functionality may be limited</i>&nbsp;⚠️</noscript>
 </div></center>

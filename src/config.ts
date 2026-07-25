@@ -1,3 +1,5 @@
+// CONFIGURATION FILE (config.ts)
+
 export const cfg = {
   // ABOUT THE WEBSITE
   name: "Axeon Network", // Website name
