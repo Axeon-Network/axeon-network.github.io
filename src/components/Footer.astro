@@ -5,14 +5,11 @@ import { cfg } from "../config";
 ---
 
 <hr>
-<center><div class="footer">
+<div class="footer">
     <h4>Add our 88x31 button!</h4>
-    <div class="button8831">
-      <img src="/img/8831/axeon.png" alt="Axeon Network button 1" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
-      <img src="/img/8831/axeon2.png" alt="Axeon Network button 2" class="mybutton" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon2.png"&gt;` style="cursor:pointer;">
-    </div>
+    <img src="/img/8831/axeon.png" alt="Axeon Network button" class="button8831" title="Click to copy the HTML code!" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/axeon.png"&gt;` style="cursor:pointer;">
     <script>
-      document.querySelectorAll('.mybutton').forEach(btn => {
+      document.querySelectorAll('.button8831').forEach(btn => {
          const element = btn as HTMLElement;
          element.addEventListener('click', () => {
             const text = (element.dataset.copy || "")
@@ -33,4 +30,4 @@ import { cfg } from "../config";
         <div>Wordmark designed by <a href="https://github.com/SnowyBiFox">KitSixtyFour</a></div>
     </details>
     <noscript><br>⚠️&nbsp;<i>JavaScript is disabled, some website functionality may be limited</i>&nbsp;⚠️</noscript>
-</div></center>
+</div>
