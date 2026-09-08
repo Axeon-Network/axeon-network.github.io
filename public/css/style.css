@@ -1,5 +1,10 @@
 /* WEBSITE STYLING FILE (style.css) */
-
+* {
+    --text-color: white;
+    --main-color: rgb(20, 40, 56);
+    --secondary-color: rgb(32, 64, 89);
+    --hover-color: rgb(90, 120, 150);
+}
 @font-face {
     font-family: "funneldisplay";
     src: url("../css/fonts/funneldisplay.ttf");
@@ -9,16 +14,15 @@
     src: url("../css/fonts/funneldisplaylight.ttf");
 }
 html {
-    background: #022130;
     background-image: url("../img/pattern.png");
     background-repeat: repeat;
     background-attachment: fixed;
-    color: white;
+    color: var(--text-color);
     font-family: "funneldisplaylight", sans-serif;
     font-size: 17.5px;
 }
 a {
-    color: white;
+    color: var(--text-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "funneldisplay";
@@ -52,15 +56,14 @@ summary {
     padding: 40px;
 }
 .logo img {
-    width: 350px;
     transition: 0.2s;
 }
 .logo img:hover {
     transform: scale(1.1);
 }
 .box {
-    background-color: #142838;
-    border: 2px solid white;
+    background-color: var(--main-color);
+    border: 2px solid var(--text-color);
     border-radius: 50px;
     margin-top: -100px;
     padding: 80px 30px 30px;
@@ -71,7 +74,6 @@ summary {
 }
 .grid {
     display: grid;
-    min-width: 0;
 }
 .grid.vertical {
     grid-template-rows: auto 1fr;
@@ -82,15 +84,33 @@ summary {
     height: 100px;
 }
 a.button {
-    background-color: rgb(90, 120, 150);
-    margin: 0 3px;
-    padding: 5px 10px 5px;
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    padding: 5px 20px 5px;
     border-radius: 15px;
     transition: 0.2s;
     text-decoration: none;
 }
+a.button.sm {
+    padding: 5px 10px 5px;
+    font-size: 12.5px;
+}
 a.button:hover {
-    background-color: rgb(70, 90, 110);
+    background-color: var(--hover-color);
+}
+.project-img {
+    width: 100px;
+    height: 100px;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    overflow: hidden;
+}
+.project-img img {
+    width: 75%;
+    height: 75%;
 }
 img.button8831 {
     image-rendering: pixelated;
@@ -102,11 +122,17 @@ img.button8831 {
     padding: 15px 0;
 }
 @media (max-width: 1024px) {
+    .logo img {
+        width: 300px;
+    }
     a.button {
         margin: 3px 0;
     }
 }
 @media (min-width: 1024px) {
+    .logo img {
+        width: 350px;
+    }
     .grid.horizontal#main {
         grid-template-columns: repeat(3, 1fr);
     }

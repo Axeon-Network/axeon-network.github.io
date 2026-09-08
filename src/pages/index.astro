@@ -5,23 +5,24 @@ import { Icon } from 'astro-icon/components';
 
 <Layout title="Home">
    <p>This is the <b>Axeon Network</b>. We run small community-oriented spaces and projects.</p>
-   <p><Icon name="discord" /> <b>To join the Discord Server, <a href="/discord">click here</a>!</b> Otherwise, read on to explore more.</p>
+   <p><b><Icon name="discord" /> To join the Discord Server, <a href="/discord">click here</a>!</b> Otherwise, read on to explore more.</p>
    <hr>
    <h2 class="head">Check out...</h2>
    <div class="grid horizontal">
       <div class="grid vertical">
-         <Icon name="material-symbols:book-ribbon-rounded" />
+         <div class="project-img"><img src="https://axeon-network.github.io/kurowiki/res/img/favicon.png"></div>
          <h3>KuroWiki</h3>
-         <div class="grid horizontal">
+         <div class="grid vertical">
             <a class="button" href="/kurowiki">Visit</a>
-            <a class="button" href="https://github.com/Axeon-Network/kurowiki">Source Code</a>
+            <a class="button sm" href="https://github.com/Axeon-Network/kurowiki">Source Code</a>
          </div>
       </div>
       <div class="grid vertical">
-         <Icon name="material-symbols:robot-2-rounded" />
+         <div class="project-img"><img src="https://axeon-network.github.io/media/etc/orchid.png"></div>
          <h3>Orchid</h3>
-         <div class="grid horizontal">
-            <a class="button" href="https://github.com/Axeon-Network/Orchid">Source Code</a>
+         <div class="grid vertical">
+            <a class="button" href="https://github.com/Axeon-Network/Orchid/releases">Get</a>
+            <a class="button sm" href="https://github.com/Axeon-Network/Orchid">Source Code</a>
          </div>
       </div>
    </div>
