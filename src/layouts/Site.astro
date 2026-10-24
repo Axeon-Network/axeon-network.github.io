@@ -25,11 +25,9 @@ import Footer from '../components/Footer.astro';
             <div class="navbar logo"><a href="/"><img src={cfg.logo} alt={cfg.name}></a></div>
 		    <div class="box">
 		        <slot />
-                <aside>
-					<slot name="footer">
-						<Footer />
-					</slot>
-				</aside>
+                <aside><slot name="footer">
+					<Footer />
+				</slot></aside>
 	     	</div>
 		</div>
 	</body>

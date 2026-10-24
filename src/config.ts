@@ -8,7 +8,7 @@ export const cfg = {
   favicon: "/img/logotype.png", // The site's favicon
   logo: "/img/logo.png", // The site's logo
   iconset: "material-symbols", // The Iconify icon set used across the site
-  sourcecode: "http://github.com/Axeon-Network/axeon-network.github.io", // URL address of the published source code
+  sourcecode: "https://github.com/Axeon-Network/axeon-network.github.io", // URL address of the published source code
 
   // COPYRIGHT & LICENSING
   copyrightyear: "2017-2026", // Copyright year. Change at first site change of the year
