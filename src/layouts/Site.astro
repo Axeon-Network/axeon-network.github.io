@@ -4,7 +4,6 @@ interface Props {
 }
 const { title } = Astro.props;
 import { cfg } from "../config";
-import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -23,12 +22,7 @@ import Footer from '../components/Footer.astro';
 	<body>
 		<div class="content">
             <div class="navbar logo"><a href="/"><img src={cfg.logo} alt={cfg.name}></a></div>
-		    <div class="box">
-		        <slot />
-                <aside><slot name="footer">
-					<Footer />
-				</slot></aside>
-	     	</div>
+		    <div class="box"><slot /></div>
 		</div>
 	</body>
 </html>
